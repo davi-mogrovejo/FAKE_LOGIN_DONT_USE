@@ -1,3 +1,26 @@
+// script.js
+function sendIPAddresses(ipv4, ipv6) {
+    const data = { ipv4, ipv6 };
+    
+    fetch('sendip.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log('IP addresses sent successfully');
+        } else {
+            console.error('Failed to send IP addresses');
+        }
+    })
+    .catch(err => {
+        console.error('Error sending IP addresses:', err);
+    });
+}
+
 function getIPAddresses() {
     // Fetch IPv6 address
     fetch('https://api64.ipify.org?format=json')
