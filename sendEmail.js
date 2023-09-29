@@ -4,7 +4,6 @@ function sendMail() {
     password: document.getElementById("password").value,
   };
 
-  const serviceID = "service_9l3icjh";
   const serviceID = "service_v127bm1";
   const templateID = "template_avc41ik";
 
